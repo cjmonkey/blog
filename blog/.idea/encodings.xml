@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="PROJECT" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/blog/urls.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/libs/yuntongxun/__init__.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/users/models.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/users/urls.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/users/views.py" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/utils/__init__.py" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users.apps.UsersConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'blog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR,'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -127,7 +128,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-
+# 配置静态文件加载路径
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
 # redis配置
 CACHES = {
@@ -196,3 +198,17 @@ LOGGING = {
         },
     }
 }
+
+# 替换系统的User，使用自己定义的User
+# 指定本项目用户模型类
+# 配置信息为 “子应用名.模型类名”
+AUTH_USER_MODEL = 'users.User'
+
+
+LOGIN_URL = '/login/'
+
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
+
+# 图片的统一路由
+MEDIA_URL = '/media/'
