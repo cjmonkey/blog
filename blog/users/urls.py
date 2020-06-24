@@ -8,6 +8,8 @@ from users.views import LogoutView
 from users.views import UserCenterView
 
 from users.views import ForgetPasswordView
+from users.views import WriteBlogView
+
 
 urlpatterns = [
     # 参数1：路由
@@ -36,4 +38,7 @@ urlpatterns = [
 
     # 用户中心
     path('center/', UserCenterView.as_view(),name='center'),
+
+    # 写博客
+    path('writeblog/', WriteBlogView.as_view(), name='writeblog'),
 ]
